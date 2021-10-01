@@ -11,6 +11,7 @@ public class landingpage {
 	public WebDriver driver;
 	By login= By.xpath("//a[contains(text(),'Log in')]");
 	By title= By.xpath("//h1[contains(text(),'Welcome, Please Sign In!')]");
+	By menu= By.cssSelector("div.header-menu");
 	
 	public landingpage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -25,5 +26,9 @@ public class landingpage {
 	public WebElement gettitle()
 	{
 		return driver.findElement(title);
+	}
+	public WebElement menubar()
+	{
+		return driver.findElement(menu);
 	}
 }

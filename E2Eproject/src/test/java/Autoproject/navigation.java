@@ -2,6 +2,8 @@ package Autoproject;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -10,12 +12,18 @@ import pageobjects.landingpage;
 import pageobjects.login;
 
 public class navigation extends basebrowse{
+	
+	@BeforeTest
+	public void initiateurl() throws IOException{
+		driver=	initilizedriver();
+		driver.get(prop.getProperty("url"));
+	}
 
 	@Test(dataProvider="getData")
 	public void homepagenavigate(String email, String password, String text) throws IOException
 	{
-	driver=	initilizedriver();
-	driver.get("http://demowebshop.tricentis.com/");
+//	driver=	initilizedriver();
+//	driver.get(prop.getProperty("url"));
 	landingpage lp= new landingpage(driver);
 	//compare expected with actual value
 	
@@ -27,6 +35,11 @@ public class navigation extends basebrowse{
 	lg.enterpassword().sendKeys(password);
 	System.out.println(text);
 	lg.click_login().click();
+//	lp.menubar().isDisplayed();
+	Assert.assertTrue(lp.menubar().isDisplayed());
+	//Assert.assertFalse(false);
+	
+	
 	
 		
 	}
@@ -41,5 +54,10 @@ public class navigation extends basebrowse{
 		
 		return data;
 		
+	}
+	@AfterTest
+	public void closebrowser()
+	{
+		driver.close();
 	}
 }

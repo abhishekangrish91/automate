@@ -2,33 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-16T16:44:44 IST" name="Default suite" finished-at="2021-09-16T16:44:56 IST" duration-ms="11215">
+  <suite started-at="2021-09-30T12:11:59 IST" name="Default suite" finished-at="2021-09-30T12:12:11 IST" duration-ms="11594">
     <groups>
     </groups>
-    <test started-at="2021-09-16T16:44:44 IST" name="Default test" finished-at="2021-09-16T16:44:56 IST" duration-ms="11215">
-      <class name="Autoproject.navigation">
-        <test-method signature="homepagenavigate(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Autoproject.navigation@2145b572]" started-at="2021-09-16T16:44:44 IST" name="homepagenavigate" data-provider="getData" finished-at="2021-09-16T16:44:56 IST" duration-ms="11128" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[abhishek@yopmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[@1Abhi1991]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Valid user]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-09-30T12:11:59 IST" name="Default test" finished-at="2021-09-30T12:12:11 IST" duration-ms="11594">
+      <class name="Autoproject.signup">
+        <test-method is-config="true" signature="initiateurl()[pri:0, instance:Autoproject.signup@3023df74]" started-at="2021-09-30T12:11:59 IST" name="initiateurl" finished-at="2021-09-30T12:12:09 IST" duration-ms="9353" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homepagenavigate -->
-      </class> <!-- Autoproject.navigation -->
+        </test-method> <!-- initiateurl -->
+        <test-method signature="signup()[pri:0, instance:Autoproject.signup@3023df74]" started-at="2021-09-30T12:12:09 IST" name="signup" finished-at="2021-09-30T12:12:11 IST" duration-ms="2181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:Autoproject.signup@3023df74]" started-at="2021-09-30T12:12:11 IST" name="closebrowser" finished-at="2021-09-30T12:12:11 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closebrowser -->
+      </class> <!-- Autoproject.signup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

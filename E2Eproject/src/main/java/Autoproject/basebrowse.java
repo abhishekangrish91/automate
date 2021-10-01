@@ -12,11 +12,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class basebrowse {
 	public WebDriver driver;
+	public Properties prop;
+	
 	@SuppressWarnings("deprecation")
+	
 	public WebDriver initilizedriver() throws IOException
 	{
-		Properties prop= new Properties();
-		FileInputStream fis= new FileInputStream("D:\\E2Eproject\\src\\main\\java\\resources\\data.properties");
+		 prop= new Properties();
+		FileInputStream fis= new FileInputStream("D:\\Gitrepo\\E2Eproject\\src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
 	String browsername=	prop.getProperty("browser");//Chrome
 	System.out.println(browsername);

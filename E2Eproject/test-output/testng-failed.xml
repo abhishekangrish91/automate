@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Autoproject.navigation">
+      <class name="Autoproject.signup">
         <methods>
-          <include name="homepagenavigate" invocation-numbers="0"/>
+          <include name="signup"/>
+          <include name="initiateurl"/>
+          <include name="closebrowser"/>
         </methods>
-      </class> <!-- Autoproject.navigation -->
+      </class> <!-- Autoproject.signup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
